@@ -15,7 +15,10 @@ public class Get_Users {
 		 .then().log().all().assertThat().statusCode(200).extract().response().asString();
 		 System.out.println(response);
 		 JsonPath jp=new JsonPath(response);
-		
+		System.out.println(jp.getString("page"));
+		System.out.println(jp.getString("per_page"));
+		System.out.println(jp.getString("total"));
+		System.out.println(jp.getString("total_pages"));
 
 
 	}
