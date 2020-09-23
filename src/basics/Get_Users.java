@@ -19,6 +19,11 @@ public class Get_Users {
 		System.out.println(jp.getString("per_page"));
 		System.out.println(jp.getString("total"));
 		System.out.println(jp.getString("total_pages"));
+		System.out.println(jp.getString("data[0].id"));
+		System.out.println(jp.getString("data[0].email"));
+		System.out.println(jp.getString("data[0].first_name"));
+		System.out.println(jp.getString("data[0].last_name"));
+		System.out.println(jp.getString("data[0].avatar"));
 		System.out.println(jp.getString("ad.company"));
 		System.out.println(jp.getString("ad.url"));
 		System.out.println(jp.getString("ad.text"));
