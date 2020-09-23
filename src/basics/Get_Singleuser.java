@@ -16,6 +16,7 @@ public class Get_Singleuser {
 		 .then().log().all().assertThat().statusCode(200).extract().response().asString();
 		 System.out.println(response);
 		 JsonPath jp=new JsonPath(response);
+		 System.out.println("****PARSING NODES OF RESPONSE BODY****");
 		System.out.println(jp.getString("data.id"));
 		System.out.println(jp.getString("data.email"));
 		System.out.println(jp.getString("data.first_name"));
