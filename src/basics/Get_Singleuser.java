@@ -23,6 +23,7 @@ public class Get_Singleuser {
 		System.out.println(jp.getString("data.avatar"));
 		System.out.println(jp.getString("ad.company"));
 		System.out.println(jp.getString("ad.url"));
+		System.out.println(jp.getString("ad.text"));
 
 	}
 
