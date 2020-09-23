@@ -19,6 +19,9 @@ public class Get_Users {
 		System.out.println(jp.getString("per_page"));
 		System.out.println(jp.getString("total"));
 		System.out.println(jp.getString("total_pages"));
+		System.out.println(jp.getString("ad.company"));
+		System.out.println(jp.getString("ad.url"));
+		System.out.println(jp.getString("ad.text"));
 
 
 	}
