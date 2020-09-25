@@ -11,11 +11,17 @@ public class Create_user {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RestAssured.baseURI="https://reqres.in/";
-		Create_user_pojo cp= new Create_user_pojo();
+		/*Create_user_pojo cp= new Create_user_pojo();
 		cp.setName("Sharath");
-		cp.setJob("System Admin");
+		cp.setJob("System Admin");*/
 		
-		String res = given().log().all().body(cp)
+		String res = given().log().all().body("Request\r\n" + 
+				"/api/users\r\n" + 
+				"\r\n" + 
+				"{\r\n" + 
+				"    \"name\": \"morpheus\",\r\n" + 
+				"    \"job\": \"leader\"\r\n" + 
+				"}")
 		.when().post("api/users")
 		.then().log().all().assertThat().statusCode(201).extract().response().asString();
 		
