@@ -9,7 +9,7 @@ public class Users_list_pojo {
 	private String total;
 	private String total_pages;
 	private List<Data_pojo> data;
-	private String ad;
+	private Ad_pojo ad;
 	
 	public String getPage() {
 		return page;
@@ -41,10 +41,10 @@ public class Users_list_pojo {
 	public void setData(List<Data_pojo> data) {
 		this.data = data;
 	}
-	public String getAd() {
+	public Ad_pojo getAd() {
 		return ad;
 	}
-	public void setAd(String ad) {
+	public void setAd(Ad_pojo ad) {
 		this.ad = ad;
 	}
 	
