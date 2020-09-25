@@ -24,6 +24,15 @@ public class List_user_resource {
 		 System.out.println(res.getTotal());
 		 System.out.println(res.getTotal_pages());
 		 List<Data_pojo> data = res.getData();
+		 for(int j=0;j<data.size();j++)
+			{
+				System.out.println("Name is  "+data.get(j).getName());
+				System.out.println("Id is  "+data.get(j).getId());
+				System.out.println("Color is "+data.get(j).getColor());
+				System.out.println("Year is "+data.get(j).getYear());
+				System.out.println("Pantone_value is "+data.get(j).getPantone_value());
+			}
+
 		 
 		 
 
