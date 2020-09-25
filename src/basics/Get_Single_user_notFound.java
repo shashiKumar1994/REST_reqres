@@ -15,7 +15,7 @@ public class Get_Single_user_notFound {
 		Response response = request.get("api/users/23");
 		ResponseBody body = response.getBody();
 		System.out.println(body.asString());
-
+		System.out.println(response.getStatusCode());
 	}
 
 }
