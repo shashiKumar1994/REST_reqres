@@ -3,6 +3,8 @@ package basics;
 import static io.restassured.RestAssured.given;
 
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import pojo.Create_user_pojo;
 
 public class Update_user {
@@ -15,11 +17,16 @@ public class Update_user {
 		cp.setName("Madhu Sudhan");
 		cp.setJob("Marketing");
 		
-		String res = given().log().all().body(cp)
+		/*String res = given().log().all().body(cp)
 		.when().put("api/users/2")
 		.then().log().all().assertThat().statusCode(200).extract().response().asString();
 		
-		System.out.println(res);
+		System.out.println(res);*/
+		
+		RequestSpecification req = RestAssured.given().log().all().body(cp);
+		Response resp = req.put("api/users/2");
+		int status_code = resp.getStatusCode();
+		System.out.println(status_code);
 		
 
 	}
